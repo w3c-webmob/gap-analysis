@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Comparing mobile apps platforms user experiences</title>
+    <link rel="stylesheet" href="http://www.w3.org/2007/08/video/style.css" type="text/css"/>
+    <link rel="stylesheet" href="http://www.w3.org/2007/08/video/print.css" type="text/css" media="print"/>
+    <link rel="stylesheet" href="http://www.w3.org/2013/06/mobile-web-app-state/style.css" type="text/css"/>
+    <style>figure { text-align:center; margin: 1em; }
+ figcaption { font-style: italic;}
+dd { margin-bottom:1em;}
+dt { margin-bottom: 0.2em;}
+dd p:first-child { margin-top: 0.5em;}
+p.continued { margin-bottom: 0em;}
+th.category { color: #E2EDFE; background-color:#005A9C;}
+td ul { margin:0; padding:0;}
+td ul li { margin-left:0.7em;}
+div.issue, div.note {
+    clear: both;
+    margin: 1em 0;
+    padding: 1em 1.2em 0.5em;
+    position: relative;
+}
+.issue {
+    background: none repeat scroll 0 0 #FBE9E9;
+    border-color: #E05252;
+}
+.issue, .note {
+    border-left-style: solid;
+    border-left-width: 0.5em;
+    padding: 0.5em;
+}
+tbody {
+ page-break-inside:avoid;
+}
+/*table { margin:0 -5em;}*/
+
+</style>
+  </head>
+  <body>
+    <div id="page">
+      <h1>Comparing mobile apps platforms user experiences</h1>
+    </div>
+
+<h2>Status</h2>
+<p>This is a draft, work-in-progress analysis derived from the <a href="http://www.w3.org/wiki/Closing_the_gap_with_native">“Closing the Gap with Native” Headlight task force</a>.</p>
+
+<h2>Introduction</h2>
+
+<p>To compare the various existing mobile apps development approaches, two main perspectives can be taken:</p>
+<ul>
+<li>from the end-user perspective: how well the said development approach will make it possible to provide the best possible user experience;</li>
+<li>from the content and service provider perspective: how well the said development approach will optimize their costs and benefits.</li>
+</ul>
+
+<p>This document proposes a model to analyze a give mobile app development approach from the end-user experience perspective. To that end, it identifies the various high level tasks a user will be confronted when interacting with a given application, starting from the time she tries to install it.</p>
+
+<p>See also:</p>
+<ul>
+<li><a href="http://w3c-webmob.github.io/gap-analysis/ux-webapps.html">Application of this framework to Web apps compared to native apps</a></li>
+<li><a href="http://w3c-webmob.github.io/gap-analysis/provider-comparison-framework.html">Framework to compare mobile apps development approaches from a provider perspective</a></li>
+</ul>
+
+
+<h2>A Framework for User Experience comparison of Mobile Apps</h2>
+
+<p>In a world of many competing applications, service and content providers need to offer a user experience that reduces as much as possible the friction of using their applications. User experience considerations are particularly important on mobile devices since their hardware and network characteristics often exacerbate the difficulties that users face.</p>
+<p>The parameters that influence the quality of the user experience  for mobile apps include:</p>
+<div class="issue">Add diagram to illustrate and tie to application lifecycle</div>
+<div class="issue">Other possible orders / groupings:<ul>
+<li>  Getting the app,
+ Running the app,
+ Using the app</li><li>
+ world contains apps
+ Device contains apps
+ App contains views
+ View contains content</li></ul>
+</div>
+<div class="issue">Is customization a separate parameter to consider? How about sharing / social network interactions?</div>
+<div class="issue">Illustrate with examples? Link back to existing illustrated terminology?</div>
+
+<dl>
+<dt>Ease of discovery and acquisition</dt>
+<dd><p>Before a user can use any app, she needs to know the app exists, how to get it, and she needs to actually get it.</p>
+<p class="continued">This encompasses the following operations:</p>
+<ul>
+<li>Searching an app</li>
+<li>Reaching an app from physical artifacts (ads, paper magazines, TV screen, product labels)</li>
+<li>Reaching an app from on-line interactions (social networks, on-line reviews, etc.)</li>
+<li>Paying for an app</li>
+<li>Downloading an app</li>
+<li>Authorizing an app for special privileges</li>
+</ul>
+</dd>
+<dt>Ease of finding on device and launching</dt>
+<dd><p>Once acquired, the user should have easy access the application when she needs it; the shortest and simplest the task, the less time she will be ready to wait to start accomplishing it. For instance, looking up the weather or the time should be near instantaneous, while a slightly longer wait before starting to play a game might be acceptable.</p>
+<p class="continued">This encompasses the following operations:</p>
+<ul>
+<li>Locating the app launcher</li>
+<li>Starting the app</li>
+<li>Waiting for the app to be ready to use</li>
+</ul>
+</dd>
+<dt>Intuitiveness and ease of understanding</dt>
+<dd><p>When using a new or rarely used application, the user needs to find her way easily to accomplish her task at hand; the more the app user interface resembles other apps she is used to and re-uses the same interaction patterns, the less effort she will need to feel at home.</p>
+<p class="continued">This encompasses the following operations:</p>
+<ul>
+<li>Adopting familiar user interfaces</li>
+<li>Adopting familiar user interaction patterns</li>
+<li>Guiding the user</li>
+</ul></dd>
+<dt>Smoothness and responsiveness</dt>
+<dd><p>Any glitch and slowness of the user interface creates a barrier to the accomplishment of the task the user started the app for.</p>
+<p class="continued">This encompasses the following operations:</p>
+<ul>
+<li>Navigating through views provided by the app (e.g. different sections of a news app)</li>
+<li>Interacting within a given view of the app (e.g. content of a specific section of a news app)</li>
+<li>Obtaining content from the network</li>
+<li>Pushing content to the network</li>
+</ul>
+</dd>
+<dt>Adaptability to user access requirements</dt>
+<dd><p>Depending on her physical conditions (temporary or permanent) and on her environment (e.g. luminosity), the user may want to adapt the user interface to her particular needs (e.g. changing contrast, zooming).</p>
+<p class="continued">This encompasses the following operations:</p>
+<ul>
+<li>Making the user interface flexible to different user requirements</li>
+<li>Integrating with the accessibility services on the device</li>
+</ul>
+</dd>
+<dt>Sensitivity to context</dt>
+<dd><p>The user installs some applications for their ability to help her in a given context: at a given location, a given time, or when a given event occurs.</p>
+<p class="continued">This encompasses the following operations:</p>
+<ul>
+<li>Determining the context in which the user is</li>
+<li>Notifying the user of a context-relevant information</li>
+</ul>
+<!-- push, location-->
+<dt>Personalization and privacy</dt>
+<dd>
+<p>Some applications benefit from gaining knowledge about the user (e.g. her contacts, her calendar) to adapt what they provide her.</p>
+<p>The user on the other hand is often wary of sharing more of her private information than she is aware of.</p>
+<p class="continued">This encompasses the following operations:</p>
+<ul>
+<li>Gaining access to private data</li>
+<li>Protecting user privacy</li>
+</ul></dd>
+<dt>Immersivity and focus</dt>
+<dd><p>On mobile device smaller screens, any part of the UI that distracts the user from her task is problematic. If the user needs focused attention on the app, interactions from or with other apps should be reduce-able to a minimum.</p>
+<p class="continued">This encompasses the following operations:</p>
+<ul>
+<li>Managing the whole screen space</li>
+<li>Separating UI from other apps</li>
+</ul></dd>
+<dt>Ease of returning to once launched</dt>
+<dd><p>Some apps (e.g. social apps) attract the user’s attention frequently and the user expects to be able to re-access them easily.</p>
+<p class="continued">This encompasses the following operations:</p>
+<ul>
+<li>Finding quickly the list of already launched apps</li>
+<li>Waiting for the app to be re-activated</li>
+<li>Getting the app back in the state it was left</li><!-- singleton enforcement -->
+</ul></dd>
+<dt>Ease of obtaining additional features</dt>
+<dd><p>Once a user starts using an app, she may want to obtain additional features the app provides as add-ons.</p>
+<p class="continued">This encompasses the following operations:</p>
+<ul>
+<li>Paying for an add-on</li>
+<li>Downloading the add-on</li>
+<li>Authorizing the add-on for special privileges</li>
+</ul>
+</dd>
+<dt>Ease of maintaining</dt>
+<dd><p>Once a user has acquired an app, she will want to keep it up to date. She may also want to retrieve some or all of the data that the app is creating and managing, either to share it, transfer it, or back it up. When she no longer needs the app or if she needs to recover space for others apps on the device, she will want to remove it. She may also want to reset whatever configuration or data a given app has stored on her device.</p>
+<p class="continued">This encompasses the following operations:</p>
+<ul>
+<li>Updating an app</li>
+<li>Retrieving locally stored app data</li>
+<li>Removing an app</li>
+<li>Purging an app configuration and stored data</li>
+</ul>
+<dt>Ease of cross devices usage</dt>
+<dd><p>Users have increasingly to manage multiple devices of various shapes, manufacturers and capabilities; a user is likely to want to find the apps she likes on as many of these devices as possible, and in some cases to have an app takes advantages of several devices at once (e.g. for second screen scenarios).</p>
+<p class="continued">This encompasses the following operations:</p>
+<ul>
+<li>Locating a compatible version of the app on the various devices</li>
+<li>Acquiring (possibly with payment) the app on these devices</li>
+<li>Getting the content / configuration of the app synchronized across devices</li>
+<li>Making the app work on several devices at the same time</li>
+</ul>
+</dd>
+</dl>
+<p>The critical factors that need to be optimized for a given app depend on the type of expected interactions. These factors are influenced by the service and content providers investment, but also (and sometimes primarily) by the chosen platform and its associated development approach.</p>
+
+
+
+      <div id="footer">
+        <p style="text-align:left;margin-left:0;margin-right:auto;">
+          <span style="font-size: 10pt"><a href="http://webinos.org/"><img alt="Webinos logo" src="http://www.w3.org/2012/08/web-and-automotive/webinos.png" style="float: left"/></a> This project is funded by the European Union through the
+Seventh Framework Programme (FP7/2010-2013) under grant agreement n°257103
+
+<a href="http://webinos.org/">webinos</a></span>
+        </p>
+        <hr/>
+        <address><a href="http://www.w3.org/People/Dom/">Dominique
+Hazaël-Massieux</a> &lt;<a href="mailto:dom@w3.org">dom@w3.org</a>&gt; / <a href="http://twitter.com/dontcallmedom">@dontcallmedom</a><br/>
+Last Modified: $Date: 2013-09-18 07:41:36 $</address>
+      </div>
+    </div>
+  </body>
+</html>

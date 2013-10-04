@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>Improving Web Apps User Experiences</title>
+    <link rel="stylesheet" href="http://www.w3.org/2007/08/video/style.css" type="text/css">
+    <link rel="stylesheet" href="http://www.w3.org/2007/08/video/print.css" type="text/css"
+      media="print">
+    <link rel="stylesheet" href="http://www.w3.org/2013/06/mobile-web-app-state/style.css"
+      type="text/css">
+    <style>figure { text-align:center; margin: 1em; }
+ figcaption { font-style: italic;}
+dd { margin-bottom:1em;}
+dt { margin-bottom: 0.2em;}
+dd p:first-child { margin-top: 0.5em;}
+p.continued { margin-bottom: 0em;}
+th.category { color: #E2EDFE; background-color:#005A9C;}
+td ul { margin:0; padding:0;}
+td ul li { margin-left:0.7em;}
+div.issue, div.note {
+    clear: both;
+    margin: 1em 0;
+    padding: 1em 1.2em 0.5em;
+    position: relative;
+}
+.issue {
+    background: none repeat scroll 0 0 #FBE9E9;
+    border-color: #E05252;
+}
+.issue, .note {
+    border-left-style: solid;
+    border-left-width: 0.5em;
+    padding: 0.5em;
+}
+tbody {
+ page-break-inside:avoid;
+}
+/*table { margin:0 -5em;}*/
+
+</style> </head>
+  <body>
+    <div id="page">
+      <h1>Improving Web Apps User Experiences</h1>
+    </div>
+    <h2>Status</h2>
+    <p>This is a draft, work-in-progress analysis derived from the <a href="http://www.w3.org/wiki/Closing_the_gap_with_native">“Closing
+        the Gap with Native” Headlight task force</a>.</p>
+    <h2>Introduction</h2>
+    <p>To compare the various existing mobile apps development approaches, two
+      main perspectives can be taken:</p>
+    <ul>
+      <li>from the end-user perspective: how well the said development approach
+        will make it possible to provide the best possible user experience;</li>
+      <li>from the content and service provider perspective: how well the said
+        development approach will optimize their costs and benefits.</li>
+    </ul>
+    <p>This document, based on the analysis of <a href="http://w3c-webmob.github.io/gap-analysis/ux-webapps.html">how Web apps
+        currently fare from a user experience perspective</a>, discusses some
+      possible actions that could be pursued to reduce Web apps weaknesses and
+      increase their existing advanages.</p>
+    <p>See also the <a href="http://w3c-webmob.github.io/gap-analysis/provider-comparison-framework.html">framework to compare mobile apps development
+        approaches from a provider perspective</a>.</p>
+    <h2>Improving Web Applications User Experiences Action Plans</h2>
+
+<p class="issue">These are very sketchy ideas that need to be further developed and turned into concrete action plans if and when they're deemed appropriate.</p>
+<h3>Discovery and acquisition</h3>
+<h4>Searching an app</h4>
+          Increase searchability of apps through better metadata
+<h4>Reaching an app from physical artifacts (ads, paper magazines, TV
+            screen, product labels)</h4>
+          Enable over the air discovery for <a href="http://designmind.frogdesign.com/blog/mobile-apps-must-die.html">Just-in-time
+              interactions</a>
+<h4>Reaching an app from on-line interactions (social networks,
+            on-line reviews, etc.)</h4>
+          Promote best practices of URI management for client-side apps
+<h4>Paying for an app</h4>
+          Enable simple payments on the Web
+<h4>Downloading an app</h4>
+          
+            <ul>
+              <li>Enable large download optimizations</li>
+              <li>Fix offline</li>
+              <li>Integrate off-line Web apps in list of available OS apps</li>
+            </ul>
+          
+<h4>Authorizing an app for special privileges</h4>
+          
+            <ul>
+              <li>Allow Web apps to manage group of permissions?</li>
+              <li>Enforce consent-through-interaction pattern?</li>
+            </ul>
+          
+<h3>Finding on device and launching</h3>
+<h4>Locating the app launcher</h4>
+          Get browsers/OS vendors to simplify integration of Web apps in OS
+            apps list
+<h4>Starting the app</h4>
+          
+            <ul>
+              <li>Use manifest as a way to promote Singleton enforcement?</li>
+              <li>Saved Web apps should be started under their own branding
+                (fullscreen, optional splash screen)</li>
+            </ul>
+          
+<h4>Waiting for the app to be ready to use</h4>
+          
+            <ul>
+              <li>Provide better hooks for optimizing start time (e.g. for
+                scripts loading, assets loading)</li>
+              <li>Promote best practices</li>
+            </ul>
+          
+<h3>Intuitiveness and ease of
+            understanding</h3>
+<h4>Adopting familiar user interfaces</h4>
+          CSS should provide some level of system UI integration?
+<h4>Adopting familiar user interaction patterns</h4>
+          
+            <ul>
+              <li>More DOM Events to match specific patterns</li>
+              <li>Indie UI should help</li>
+            </ul>
+          
+<h4>Guiding the user</h4>
+          <br>
+          
+<h3>Smoothness and responsiveness</h3>
+<h4>Navigating through views provided by the app</h4>
+          
+            <ul>
+              <li>Get browsers to disable it under the right conditions (<a href="http://code.google.com/p/chromium/issues/detail?id=133391">à
+                  la Chrome</a>)</li>
+              <li>Promote work-arounds (e.g. <a href="https://github.com/ftlabs/fastclick">FastClick)</a></li>
+            </ul>
+          
+<h4>Interacting within a given view of the app</h4>
+          
+            <ul>
+              <li>Provide better hooks for managing scrolling (e.g. Scrolling
+                events)</li>
+              <li>Promote best practices and libraries</li>
+              <li>Provide more control on memory management?</li>
+            </ul>
+          
+<h4>Obtaining content from the network</h4>
+          
+            <ul>
+              <li>Background network operations</li>
+              <li>Priority handling in network ops</li>
+            </ul>
+          
+<h4>Pushing content to the network</h4>
+          
+            <ul>
+              <li>Background network operations</li>
+              <li>Priority handling in network ops</li>
+            </ul>
+          
+<h3>Adaptability to user access
+            requirements</h3>
+<h4>Making the user interface flexible to different user requirements</h4>
+          Automated or semi-automated testing tools?
+<h4>Integrating with the accessibility services on the device</h4>
+          [further analysis required]
+<h3>Sensitivity to context</h3>
+<h4>Determining the context in which the user is</h4>
+          
+            Any critical sensor missing (indoor location via WiFi id? BT4?)? Can
+            we build a more generic sensor API that doesn't work against the
+            user privacy?
+<h4>Notifying the user of a context-relevant information</h4>
+          
+            <ul>
+              <li>Progress on Push API</li>
+              <li>Look into registering wake-up for Web apps (on top of
+                notifications?)?</li>
+            </ul>
+          
+<h3>Personalization and privacy</h3>
+<h4>Gaining access to private data</h4>
+          Web Intents-like solution?
+<h4>Protecting user privacy</h4>
+          
+            <ul>
+              <li>Common strategy toward iframe handling?</li>
+              <li>DNT</li>
+            </ul>
+          
+<h3>Immersivity and focus</h3>
+<h4>Managing the whole screen space</h4>
+          Fullscreen API to the rescue?
+<h4>Separating UI from other apps</h4>
+          
+            Make it possible run Web app fullscreen, in separate browser
+            instance?
+          
+<h3>Ease of returning to once launched</h3>
+<h4>Finding quickly the list of already launched apps</h4>
+          
+            <ul>
+              <li>Allow singleton-enforcement for Web apps</li>
+              <li>Include Web apps in tasks list</li>
+            </ul>
+          
+<h4>Waiting for the app to be re-activated</h4>
+          <br>
+          
+<h4>Getting the app back in the state it was left</h4>
+          [Investigate further which states are hard to restore]
+<h3>Ease of obtaining additional features</h3>
+<h4>Paying for an add-on</h4>
+          Enable simple payments on the Web
+<h4>Downloading the add-on</h4>
+          Enable large download optimizations
+<h4>Authorizing the add-on for special privileges</h4>
+          <br>
+          
+<h3>Ease of maintaining</h3>
+<h4>Updating an app</h4>
+          <br>
+          
+<h4>Retrieving locally stored app data</h4>
+          Filesystem API?
+<h4>Removing an app</h4>
+          <br>
+          
+<h4>Purging an app configuration and stored data</h4>
+          <br>
+          
+<h3>Ease of cross devices usage</h3>
+<h4>Locating a compatible version of the app on the various devices</h4>
+          Reduce incompatibilities across devices
+<h4>Acquiring (possibly with payment) the app on these devices</h4>
+          <br>
+          
+<h4>Getting the content / configuration of the app synchronized across
+            devices</h4>
+          
+            <ul>
+              <li>Standardized identity management</li>
+              <li>Easy synchronization for Web dbs?</li>
+              <li>Discovery of other nearby devices</li>
+            </ul>
+          
+<h4>Making the app work on several devices at the same time</h4>
+          
+            <ul>
+              <li>WebRTC</li>
+              <li>UX guidance on cross-device apps</li>
+            </ul>
+          
+    <div id="footer">
+      <p style="text-align:left;margin-left:0;margin-right:auto;"> <span style="font-size: 10pt"><a
+            href="http://webinos.org/"><img alt="Webinos logo" src="http://www.w3.org/2012/08/web-and-automotive/webinos.png"
+              style="float: left"></a> This project is funded by the European
+          Union through the Seventh Framework Programme (FP7/2010-2013) under
+          grant agreement n°257103 <a href="http://webinos.org/">webinos</a></span>
+      </p>
+      <hr>
+      <address><a href="http://www.w3.org/People/Dom/">Dominique Hazaël-Massieux</a>
+        &lt;<a href="mailto:dom@w3.org">dom@w3.org</a>&gt; / <a href="http://twitter.com/dontcallmedom">@dontcallmedom</a><br>
+        Last Modified: $Date: 2013-09-18 07:41:36 $</address>
+    </div>
+  </body>
+</html>

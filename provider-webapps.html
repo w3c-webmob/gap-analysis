@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>Web Apps Gap Analysis From Provider Perspective</title>
+    <link rel="stylesheet" href="http://www.w3.org/2007/08/video/style.css" type="text/css">
+    <link rel="stylesheet" href="http://www.w3.org/2007/08/video/print.css" type="text/css"
+      media="print">
+    <link rel="stylesheet" href="http://www.w3.org/2013/06/mobile-web-app-state/style.css"
+      type="text/css">
+    <style>figure { text-align:center; margin: 1em; }
+ figcaption { font-style: italic;}
+dd { margin-bottom:1em;}
+dt { margin-bottom: 0.2em;}
+dd p:first-child { margin-top: 0.5em;}
+p.continued { margin-bottom: 0em;}
+th.category { color: #E2EDFE; background-color:#005A9C;}
+td ul { margin:0; padding:0;}
+td ul li { margin-left:0.7em;}
+div.issue, div.note {
+    clear: both;
+    margin: 1em 0;
+    padding: 1em 1.2em 0.5em;
+    position: relative;
+}
+.issue {
+    background: none repeat scroll 0 0 #FBE9E9;
+    border-color: #E05252;
+}
+.issue, .note {
+    border-left-style: solid;
+    border-left-width: 0.5em;
+    padding: 0.5em;
+}
+tbody {
+ page-break-inside:avoid;
+}
+/*table { margin:0 -5em;}*/
+
+</style> </head>
+  <body>
+    <div id="page">
+      <h1>Web Apps Gap Analysis From Provider Perspective</h1>
+    </div>
+    <h2>Status</h2>
+    <p>This is a draft, work-in-progress analysis derived from the <a href="http://www.w3.org/wiki/Closing_the_gap_with_native">“Closing
+        the Gap with Native” Headlight task force</a>.</p>
+    <h2>Introduction</h2>
+    <p>To compare the various existing mobile apps development approaches, two
+      main perspectives can be taken:</p>
+    <ul>
+      <li>from the end-user perspective: how well the said development approach
+        will make it possible to provide the best possible user experience;</li>
+      <li>from the content and service provider perspective: how well the said
+        development approach will optimize their costs and benefits.</li>
+    </ul>
+    <p>This document applies the <a href="http://w3c-webmob.github.io/gap-analysis/provider-comparison-framework.html">separately developed model to
+        analyze a give mobile app development approach from provider perspective</a>
+      to Web applications.</p>
+    <p>See also:</p>
+    <ul>
+      <li><a href="http://w3c-webmob.github.io/gap-analysis/provider-actions.html">Proposals to reduce the gaps of Web applications from a provider perspective</a></li>
+      <li><a href="http://w3c-webmob.github.io/gap-analysis/ux-comparison-framework.html">Framework to compare mobile apps development approaches
+          from a user experience perspective</a></li>
+    </ul>
+    <h2>Web Applications Strengths and Weaknesses from a Provider Perspective</h2>
+    <table>
+      <caption>Strength/Weakness for the provider experience for Web apps on
+        mobile</caption>
+      <thead>
+        <tr>
+          <th>Provider experience parameter</th>
+          <th>Strength</th>
+          <th>Weakness</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th colspan="3">Development cost</th>
+        </tr>
+        <!-- 
+<tr><th scope="row"></th><td></td><td></td><td></td></tr>-->
+        <tr>
+          <th scope="row">Hiring / training developers</th>
+          <td>A lot of Web developers</td>
+          <td>Not many Web developers now how to develop good Web apps for
+            mobile</td>
+        </tr>
+        <tr>
+          <th scope="row">Writing code</th>
+          <td>Plenty of IDEs for the Web</td>
+          <td>Support for responsive approaches?</td>
+        </tr>
+        <tr>
+          <th scope="row">Finding documentation and guidance</th>
+          <td>Lots of Web-related sites and forums</td>
+          <td>Lack of authoritative content?</td>
+        </tr>
+        <tr>
+          <th scope="row">Finding libraries</th>
+          <td>Lots of them</td>
+          <td>Hard to find the right one, esp. with mobile constraints</td>
+        </tr>
+        <tr>
+          <th scope="row">Reporting platform bugs</th>
+          <td>Technologies are developed in public</td>
+          <td>
+            <ul>
+              <li>Hard to find the right forum to target</li>
+              <li>Hard to distinguish between browser bug and platform bug</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Debugging and diagnostics</th>
+          <td>
+            Same Web platform on desktop and mobile makes it somewhat easier to
+            debug
+          </td>
+          <td>
+            <ul>
+              <li>Growing but still very limited toolset</li>
+              <li>Toolset almost always browser-specific, thus hard to apply
+                interoperably</li>
+              <li>Memory management particularly poor</li>
+              <li>Browser/device-specific bugs particularly hard to pinpoint</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Testing</th>
+          <td>
+            Lots of automated testing tools, incl. on mobile
+          </td>
+          <td>Hard to test chrome-based user interactions (e.g. consent dialog)</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th colspan="3">Deployment cost</th>
+        </tr>
+        <tr>
+          <th scope="row">Getting authorization to deploy</th>
+          <td>None required</td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Uploading the app</th>
+          <td>Mostly seamless</td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Advertising the app</th>
+          <td>As open as anything else on the Web</td>
+          <td>
+            <ul>
+              <li>No well-known central location with high visibility for users</li>
+              <li>No well-known ways for users to describe well-rated apps</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Protecting the app code and operations</th>
+          <td>Server-side component out of reach to client-side attackers</td>
+          <td>Hard to get as thorough protection of client-side as available to
+            native apps</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th colspan="3">Maintenance cost</th>
+        </tr>
+        <tr>
+          <th scope="row">Getting user input and feedback</th>
+          <td>Use the Web</td>
+          <td>No one-click infrastructure to share comments associated to a
+            given identity (assuming reputation is an incentive)</td>
+        </tr>
+        <tr>
+          <th scope="row">Keeping up with incompatible changes in the platform</th>
+          <td>Platform evolutions are decided in the open</td>
+          <td>Hard to keep track of these evolutions</td>
+        </tr>
+        <tr>
+          <th scope="row">Getting visibility into future new features of the
+            platform</th>
+          <td>Platform evolutions are decided in the open</td>
+          <td>Hard to keep track of these evolutions</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th colspan="3">Expected outcomes</th>
+        </tr>
+        <tr>
+          <th scope="row">Reaching out to as many users as possible</th>
+          <td>
+            <ul>
+              <li>Web works everywhere</li>
+              <li>URLs make it easy for users to spread the word</li>
+            </ul>
+          </td>
+          <td>Hard to design apps that work well across many devices, browsers,
+            culture, etc.</td>
+        </tr>
+        <tr>
+          <th scope="row">Getting paid</th>
+          <td>Each provider can pick its most appropriate payment system</td>
+          <td>No general one-click solution to payment</td>
+        </tr>
+        <tr>
+          <th scope="row">Getting recognition</th>
+          <td>Neutral?</td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <th scope="row">Enabling social change</th>
+          <td>
+            <ul>
+              <li>No commercial entity in a position to censor</li>
+              <li>Availability to many more devices to lower cost</li>
+            </ul>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div id="footer">
+      <p style="text-align:left;margin-left:0;margin-right:auto;"> <span style="font-size: 10pt"><a
+            href="http://webinos.org/"><img alt="Webinos logo" src="http://www.w3.org/2012/08/web-and-automotive/webinos.png"
+              style="float: left"></a> This project is funded by the European
+          Union through the
+          Seventh Framework Programme (FP7/2010-2013) under grant agreement
+          n°257103
+          <a href="http://webinos.org/">webinos</a></span> </p>
+      <hr>
+      <address><a href="http://www.w3.org/People/Dom/">Dominique
+          Hazaël-Massieux</a> &lt;<a href="mailto:dom@w3.org">dom@w3.org</a>&gt;
+        / <a href="http://twitter.com/dontcallmedom">@dontcallmedom</a><br>
+        Last Modified: $Date: 2013-09-18 07:41:36 $</address>
+    </div>
+  </body>
+</html>

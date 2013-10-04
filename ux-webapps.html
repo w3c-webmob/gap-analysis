@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>Web Apps User Experience Gap Analysis</title>
+    <link rel="stylesheet" href="http://www.w3.org/2007/08/video/style.css" type="text/css">
+    <link rel="stylesheet" href="http://www.w3.org/2007/08/video/print.css" type="text/css"
+      media="print">
+    <link rel="stylesheet" href="http://www.w3.org/2013/06/mobile-web-app-state/style.css"
+      type="text/css">
+    <style>figure { text-align:center; margin: 1em; }
+ figcaption { font-style: italic;}
+dd { margin-bottom:1em;}
+dt { margin-bottom: 0.2em;}
+dd p:first-child { margin-top: 0.5em;}
+p.continued { margin-bottom: 0em;}
+th.category { color: #E2EDFE; background-color:#005A9C;}
+td ul { margin:0; padding:0;}
+td ul li { margin-left:0.7em;}
+div.issue, div.note {
+    clear: both;
+    margin: 1em 0;
+    padding: 1em 1.2em 0.5em;
+    position: relative;
+}
+.issue {
+    background: none repeat scroll 0 0 #FBE9E9;
+    border-color: #E05252;
+}
+.issue, .note {
+    border-left-style: solid;
+    border-left-width: 0.5em;
+    padding: 0.5em;
+}
+tbody {
+ page-break-inside:avoid;
+}
+/*table { margin:0 -5em;}*/
+
+</style> </head>
+  <body>
+    <div id="page">
+      <h1>Web Apps User Experience Gap Analysis</h1>
+    </div>
+    <h2>Status</h2>
+    <p>This is a draft, work-in-progress analysis derived from the <a href="http://www.w3.org/wiki/Closing_the_gap_with_native">“Closing
+        the Gap with Native” Headlight task force</a>.</p>
+    <h2>Introduction</h2>
+    <p>To compare the various existing mobile apps development approaches, two
+      main perspectives can be taken:</p>
+    <ul>
+      <li>from the end-user perspective: how well the said development approach
+        will make it possible to provide the best possible user experience;</li>
+      <li>from the content and service provider perspective: how well the said
+        development approach will optimize their costs and benefits.</li>
+    </ul>
+    <p>This document applies the <a href="http://w3c-webmob.github.io/gap-analysis/ux-comparison-framework.html">model developed separately to
+        analyze a give mobile app development approach from the end-user
+        experience perspective</a> to the kind of user experience Web apps allow
+      currently.</p>
+    <p>See also:</p>
+    <ul>
+      <li><a href="http://w3c-webmob.github.io/gap-analysis/ux-actions.html">Proposals to reduce the UX gaps of Web applications</a></li>
+      <li><a href="http://w3c-webmob.github.io/gap-analysis/provider-comparison-framework.html">Framework to compare mobile apps development approaches
+          from a provider perspective</a></li>
+    </ul>
+    <h2>Web Applications User Experiences Strengths and Weaknesses</h2>
+    <div class="issue">Distinguish characteristics of browser-based apps from
+      Web-OS apps in the table</div>
+    <table>
+      <caption>Strength/Weakness for the user experience of Web apps on mobile</caption>
+      <thead>
+        <tr>
+          <th>User experience parameter</th>
+          <th>Strength</th>
+          <th>Weakness</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th colspan="3" class="category">Discovery and acquisition</th>
+        </tr>
+        <tr>
+          <th>Searching an app</th>
+          <td>
+            <ul>
+              <li>Long history of search on the Web</li>
+              <li>Benefits of links to rank / discover</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>No clear delineation (yet) of mobile-optimized content</li>
+              <li>difficulty of indexing non text-based app</li>
+              <li>Users don't necessarily associate Web search with apps
+                discovery</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Reaching an app from physical artifacts (ads, paper magazines, TV
+            screen, product labels)</th>
+          <td>URLs make it easy (and can be turned into easier forms)</td>
+          <td>No good way to discover "over the air"</td>
+        </tr>
+        <tr>
+          <th>Reaching an app from on-line interactions (social networks,
+            on-line reviews, etc.)</th>
+          <td>Links and no-installation make it much easier</td>
+          <td>Pure client-side JavaScript don't necessarily deal well with URIs</td>
+        </tr>
+        <tr>
+          <th>Paying for an app</th>
+          <td>Users aren't constrained to a single payment processor</td>
+          <td>No easy way to integrate "one-click" payment</td>
+        </tr>
+        <tr>
+          <th>Downloading an app</th>
+          <td>For simple apps, accessing an app is equivalent to downloading it</td>
+          <td>
+            <ul>
+              <li>For apps with larger needs, it is difficult to defer the
+                download of larger assets to better network conditions</li>
+              <li>While offline is possible, it's mostly broken</li>
+              <li>Users don't necessarily expect or understand they can use a
+                Web apps while disconnected</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Authorizing an app for special privileges</th>
+          <td>
+            <ul>
+              <li>Privileges get granted when they're needed</li>
+              <li>Many privileges get granted implicitly through user
+                interactions (e.g. selecting a file)</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>Apps that require many privileges create a storm of prompts</li>
+              <li>Impossible to know beforehand what an app will be asking</li>
+              <li>Hard to track what privileges an app has obtained</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th colspan="3" class="category">Finding on device and launching</th>
+        </tr>
+        <tr>
+          <th>Locating the app launcher</th>
+          <td>Bookmarks can serve as app launchers</td>
+          <td>
+            <ul>
+              <li>Bookmarks are hard to manage</li>
+              <li>Users don't know how to save a bookmark on their home screen</li>
+              <li>Depending on the OS, the OS app list cannot include Web apps
+                bookmarks</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Starting the app</th>
+          <td><br>
+          </td>
+          <td>
+            <ul>
+              <li>As a Web app runs in the browser, if the browser isn't
+                running, the actual app that gets started is confusingly the
+                browser</li>
+              <li>If the Web app is already running in the browser, hitting the
+                bookmark won't go back to the existing tab (no singleton
+                enforcement)</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Waiting for the app to be ready to use</th>
+          <td><br>
+          </td>
+          <td>
+            <ul>
+              <li>Starting the browser makes starting the app that much longer</li>
+              <li>Optimizing start time for Web apps remain difficult</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th colspan="3" class="category">Intuitiveness and ease of
+            understanding</th>
+        </tr>
+        <tr>
+          <th>Adopting familiar user interfaces</th>
+          <td>
+            <ul>
+              If the user is familiar with a Web app on other devices, re-using
+              the same look and feel on mobile is allowed and relatively easy
+            </ul>
+          </td>
+          <td>
+            <ul>
+              Providing a UI that integrates well with the OS UI can be
+              challenging, impossible in some cases
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Adopting familiar user interaction patterns</th>
+          <td>Users are broadly familiar with Web interactions patterns (back
+            button, reload, links, etc)</td>
+          <td>
+            <ul>
+              <li>Integrating with the OS interaction patterns can be
+                challenging, impossible in some cases</li>
+              <li>Browsers steals interactions that apps would want to
+                use(zooming, swiping)</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Guiding the user</th>
+          <td><br>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th colspan="3" class="category">Smoothness and responsiveness</th>
+        </tr>
+        <tr>
+          <th>Navigating through views provided by the app</th>
+          <td><br>
+          </td>
+          <td>300ms for touch/click events make Web apps feel sluggish</td>
+        </tr>
+        <tr>
+          <th>Interacting within a given view of the app</th>
+          <td><br>
+          </td>
+          <td>
+            <ul>
+              <li>Scrolling with heavy content is very hard to make smooth</li>
+              <li>JS Garbage Collection creates unpredictable spike of CPU</li>
+              <li>JavaScript slower than native code for CPU intensive
+                operations</li>
+              <li>CPU intensive operations run in a separate thread (via
+                Workers) don't have access to all content and APIs from main
+                thread</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Obtaining content from the network</th>
+          <td><br>
+          </td>
+          <td>
+            <ul>
+              <li>Impossible to defer large downloads to better network
+                conditions</li>
+              <li>Impossible to group network requests to optimize
+                latency/battery/network usage</li>
+              <li>Limitations to the type of protocols that can be used</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Pushing content to the network</th>
+          <td><br>
+          </td>
+          <td>
+            <ul>
+              <li>Impossible to defer large upload to better network conditions</li>
+              <li>Impossible to group network requests to optimize
+                latency/battery/network usage</li>
+              <li>Limitations to the type of protocols that can be used</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th colspan="3" class="category">Adaptability to user access
+            requirements</th>
+        </tr>
+        <tr>
+          <th>Making the user interface flexible to different user requirements</th>
+          <td>Web browsers provide more flexibility by default</td>
+          <td>User interfaces are not often tested in a wide enough set of
+            conditions to cater for that flexibility</td>
+        </tr>
+        <tr>
+          <th>Integrating with the accessibility services on the device</th>
+          <td>Web has a long history of accessibility integration</td>
+          <td>Mapping with on-device accessibility features is likely to be
+            lesser than what can be obtained from platform-specific code?</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th colspan="3" class="category">Sensitivity to context</th>
+        </tr>
+        <tr>
+          <th>Determining the context in which the user is</th>
+          <td>Users are in control of what the app can determine</td>
+          <td>
+            Browsers don't have access to all sensors available on a given
+            device, and requires specific permissions to get it in some cases
+          </td>
+        </tr>
+        <tr>
+          <th>Notifying the user of a context-relevant information</th>
+          <td><br>
+          </td>
+          <td>
+            <ul>
+              <li>No access to Push notifications</li>
+              <li>No way to wake up an app while off-line depending on some
+                environment parameters (e.g. location)</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th colspan="3" class="category">Personalization and privacy</th>
+        </tr>
+        <tr>
+          <th>Gaining access to private data</th>
+          <td><br>
+          </td>
+          <td>
+            <ul>
+              <li>For local data, only possible on an ad-hoc basis</li>
+              <li>Require prompting the user one way or another</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Protecting user privacy</th>
+          <td>Users are always in control before data is first shared</td>
+          <td>
+            <ul>
+              <li>Hard to track with whom what data has been shared</li>
+              <li>Third party inclusion muddies this further</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th colspan="3" class="category">Immersivity and focus</th>
+        </tr>
+        <tr>
+          <th>Managing the whole screen space</th>
+          <td><br>
+          </td>
+          <td>Browser chrome by default prevents fullscreen</td>
+        </tr>
+        <tr>
+          <th>Separating UI from other apps</th>
+          <td><br>
+          </td>
+          <td>
+            <ul>
+              <li>Browser chrome can interfere</li>
+              <li>Other tabs can interfere</li>
+              <li>“External” links either remove the current app, and move it to
+                a hard-to-access background tab</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th colspan="3" class="category">Ease of returning to once launched</th>
+        </tr>
+        <tr>
+          <th>Finding quickly the list of already launched apps</th>
+          <td><br>
+          </td>
+          <td>
+            <ul>
+              <li>Web app not in the list of running Apps</li>
+              <li>Hitting a bookmark starts a new "instance" instead of
+                returning to existing one</li>
+              <li>Finding existing running instance among other tabs is
+                difficult</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <th>Waiting for the app to be re-activated</th>
+          <td><br>
+          </td>
+          <td>if the browser is not running, overhead of browser start up
+            (without app branding)
+          </td>
+        </tr>
+        <tr>
+          <th>Getting the app back in the state it was left</th>
+          <td><br>
+          </td>
+          <td>
+            Restoring the state of the app (e.g. scrolling location) not always
+            trivial?
+          </td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th colspan="3" class="category">Ease of obtaining additional features</th>
+        </tr>
+        <tr>
+          <th>Paying for an add-on</th>
+          <td>Users aren't constrained to a single payment
+            processor</td>
+          <td>No easy way to integrate "one-click" payment</td>
+        </tr>
+        <tr>
+          <th>Downloading the add-on</th>
+          <td>If needs little additional content, this is more streamlined than
+            having to go through an app store</td>
+          <td>for add-ons with larger needs, it is difficult to
+            defer the download of larger assets to better
+            network conditions</td>
+        </tr>
+        <tr>
+          <th>Authorizing the add-on for special privileges</th>
+          <td>Since privileges are granted on usage (rather than up front), this
+            is more streamlined in Web apps</td>
+          <td>Risks of storm of prompts</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th colspan="3" class="category">Ease of maintaining</th>
+        </tr>
+        <tr>
+          <th>Updating an app</th>
+          <td>App automatically up-to-date when on-line</td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <th>Retrieving locally stored app data</th>
+          <td><br>
+          </td>
+          <td>Web app data is not easily retrieved outside of the browser <span
+              class="issue">(is it worse for encrypted storage?)</span></td>
+        </tr>
+        <tr>
+          <th>Removing an app</th>
+          <td>For apps without offline components, no action needed</td>
+          <td>Current UIs to manage offline Web apps are hard to get at, hard to
+            use, and not integrated in OS apps management</td>
+        </tr>
+        <tr>
+          <th>Purging an app configuration and stored data</th>
+          <td>Browsers make it possible (not clear this is so for native apps)</td>
+          <td>Browsers make it hard</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <th colspan="3" class="category">Ease of cross devices usage</th>
+        </tr>
+        <tr>
+          <th>Locating a compatible version of the app on the various devices</th>
+          <td>
+            <ul>
+              <li>availability of a compatible version much likelier due to
+                cross-device nature of the Web</li>
+              <li>URLs make locating it trivial</li>
+            </ul>
+          </td>
+          <td>Interop issues across devices might make experience of a given Web
+            app very poor on some devices</td>
+        </tr>
+        <tr>
+          <th>Acquiring (possibly with payment) the app on these devices</th>
+          <td>
+            <ul>
+              <li>Apps don't have to be paid multiple times (depending on
+                provider's policy)</li>
+              <li>No need to configure / maintain the app on the various devices</li>
+            </ul>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+        <tr>
+          <th>Getting the content / configuration of the app synchronized across
+            devices</th>
+          <td>
+            <ul>
+              <li>Federated identity is built for Web browsers</li>
+            </ul>
+          </td>
+          <td>Limited access to discovery-by-proximity systems</td>
+        </tr>
+        <tr>
+          <th>Making the app work on several devices at the same time</th>
+          <td>
+            <ul>
+              <li>One URL, one app</li>
+            </ul>
+          </td>
+          <td><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="issue">What's missing from <a href="http://www.w3.org/QA/2013/08/enabling_new_types_of_web_user.html">Scott's
+        analysis</a>?</div>
+    <div class="issue">Where does security fit in this model? In general, how to
+      make Enterprise stuff in this view?</div>
+    <div class="issue">How about identity management? Native apps are also
+      growing in this space</div>
+    <div class="issue">Any lessons from <a href="http://sealedabstract.com/rants/why-mobile-web-apps-are-slow/">Why
+        mobile web apps are slow?</a></div>
+    <div id="footer">
+      <p style="text-align:left;margin-left:0;margin-right:auto;"> <span style="font-size: 10pt"><a
+            href="http://webinos.org/"><img alt="Webinos logo" src="http://www.w3.org/2012/08/web-and-automotive/webinos.png"
+              style="float: left"></a> This project is funded by the European
+          Union through the
+          Seventh Framework Programme (FP7/2010-2013) under grant agreement
+          n°257103
+          <a href="http://webinos.org/">webinos</a></span> </p>
+      <hr>
+      <address><a href="http://www.w3.org/People/Dom/">Dominique
+          Hazaël-Massieux</a> &lt;<a href="mailto:dom@w3.org">dom@w3.org</a>&gt;
+        / <a href="http://twitter.com/dontcallmedom">@dontcallmedom</a><br>
+        Last Modified: $Date: 2013-09-18 07:41:36 $</address>
+    </div>
+  </body>
+</html>
